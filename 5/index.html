@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task#5</title>
+</head>
+<body>
+    <h1>Task#5</h1>
+    <script>
+    
+    function sortArr (a, b) {
+        if (a > b) return 1;
+        if (a < b) return -1;
+    }
+    
+    function getLowerestIndex (arr, num) {
+        var sortArray = arr.sort(sortArr);
+        for (var i = 0; i < sortArray.length; i++) {
+            if (sortArray[i] > num) {
+                console.log(i)
+                break
+            }
+        }
+    }   
+    getLowerestIndex([7, 4, 2, 10, 6, 20, 8], 4.5)
+
+    
+            
+    </script>
+</body>
+</html>
