@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task#1</title>
+</head>
+<body>
+    <input type="number" name="num">
+    <button onclick="f()">Отправить</button> 
+    <div class="container"></div>
+    <script>
+        
+    function f () {
+        var val = document.querySelector('input').value
+        for (var i = 1; i <= val; i++) {
+            var span = document.createElement('span')
+            var parentElemBody = document.body
+            parentElemBody.appendChild(span)
+            span.innerHTML = i + ' ' + 'sheep...'
+        }   
+        var br = document.createElement ('br') 
+        parentElemBody.appendChild(br)  
+    }
+    </script>
+</body>
+</html>

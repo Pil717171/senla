@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task#3</title>
+</head>
+<body>
+    <input type="text">
+    <button onclick="f()">Отправить</button> 
+    <div class="container"></div>
+    <script>
+        
+    function f () {
+        var val = document.querySelector('input').value
+        var arr = val.split(' ')
+        var word = []
+        arr.forEach((i) => {
+            var len = i.length
+            word.push(len)
+        })
+        console.log(word)
+
+       
+}
+    </script>
+
+</body>
+</html>
