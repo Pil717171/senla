@@ -13,21 +13,21 @@
     <script>
         
     function f () {
-        var val = document.querySelector('input').value
-        var arr = val.split(' ')
-        var word = []
+        var val = document.querySelector('input').value;
+        var arr = val.split(' ');
+        var word = [];
         arr.forEach((i) => {
-            var len = i.length
-            word.push(len)
-        })
-        var min = Math.min.apply(null, word)
-        var parentElemBody = document.body
-        var span = document.createElement('span')
-        parentElemBody.appendChild(span)
-        span.innerHTML = 'The shortest length of the word:'+ ' '+ min
-        var br = document.createElement ('br') 
-        parentElemBody.appendChild(br)
-    }
+            var len = i.length;
+            word.push(len);
+        });
+        var min = Math.min.apply(null, word);
+        var parentElemBody = document.body;
+        var span = document.createElement('span');
+        parentElemBody.appendChild(span);
+        span.innerHTML = 'The shortest length of the word:'+ ' '+ min;
+        var br = document.createElement ('br');
+        parentElemBody.appendChild(br);
+    };
     </script>
 
 </body>
