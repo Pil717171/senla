@@ -10,28 +10,34 @@
     <h1>Task#6</h1>
     <script>
     
-    function frame (arr, sumb) {
+    function frame (arr, symb) {
         var array = [];
         arr.forEach((e) => {
             array.push(e.length);       
         });
-        var max = Math.max.apply(null, array);
-        var s = '';
-        for (var i = 0; i < max+4; i++) {
-            s+=sumb;
+        var strLength = Math.max.apply(null, array);
+        var border = '';
+        for (var i = 0; i < strLength + 4; i++) {
+            border+=symb;
         };
-        console.log(s);
+        console.log(border);
         for (var z = 0; z < arr.length; z++) {
             var word = arr[z];
-            console.log(sumb + ' ' + word + ' ' + sumb);
+            var space = " ";
+            var wordLength = word.length;
+            while (wordLength < strLength) {    
+                space+=" ";
+                wordLength++;   
+            };
+            console.log(symb + ' ' + word + space + symb);
         };
-        console.log(s);
-    }
-    frame (['pppppppp', 'uusbcb', 'ishbcabuuu', 'jdhd'], '+');
+        console.log(border);
+    };
+    frame (['line', 'length', 'is', '10', 'characters'], '+');
     console.log(' ')
-    frame (['jjj', 'kk'], '=');
+    frame (['line', 'length', 'is', '6'], '=');
     console.log(' ')
-    frame (['ppppppppppppppp', 'uusbcb', 'ppppppppppp'], '.');
+    frame (['line', '4'], '.');
         
     </script>
 </body>

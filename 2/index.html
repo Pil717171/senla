@@ -14,21 +14,21 @@
         
     function f () {
         var val = document.querySelector('input').value;
-            for (var z = 1; z <= val; z++) {
-                var parentElemBody = document.body;
-                for (var i = 1; i <= val; i++) {
-                    var span = document.createElement('span');
-                    var redColor = 255*Math.random();
-                    var greenColor = 255*Math.random();
-                    var blueColor = 255*Math.random();
-                    var color = "rgb(" + redColor + "," + greenColor + "," + blueColor + ")";
-                        span.style = "display: inline-block; background:"+ color +"; width: 50px; height:30px; margin:5px";
-                        parentElemBody.appendChild(span);
-                }
-                var br = document.createElement ('br');
-                parentElemBody.appendChild(br);  
-        } 
-    }
+        for (var z = 1; z <= val; z++) {
+            var parentElemBody = document.body;
+            for (var i = 1; i <= val; i++) {
+                var span = document.createElement('span');
+                var redColor = 255*Math.random();
+                var greenColor = 255*Math.random();
+                var blueColor = 255*Math.random();
+                var color = "rgb(" + redColor + "," + greenColor + "," + blueColor + ")";
+                    span.style = "display: inline-block; background:"+ color +"; width: 50px; height:30px; margin:5px";
+                    parentElemBody.appendChild(span);
+            };
+            var br = document.createElement ('br');
+            parentElemBody.appendChild(br);  
+        };
+    };
     </script>
 </body>
 </html>
