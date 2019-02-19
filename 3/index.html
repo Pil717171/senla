@@ -14,7 +14,7 @@
         
     function f () {
         var val = document.querySelector('input').value;
-        var arr = val.split(' ');
+        var arr = val.split(/ +/);
         var word = [];
         arr.forEach((i) => {
             var len = i.length;
