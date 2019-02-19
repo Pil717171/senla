@@ -12,14 +12,14 @@
     
     function frame (arr, symb) {
         var array = [];
-        arr.forEach((e) => {
-            array.push(e.length);       
-        });
-        var strLength = Math.max.apply(null, array);
+        var strLength = arr.reduce((n, str) => {
+            return Math.max(n, str.length);
+        }, 0);
         var border = '';
-        for (var i = 0; i < strLength + 4; i++) {
+        var spaceBorder = 4;
+        for (var i = 0; i < strLength + spaceBorder; i++) {
             border+=symb;
-        };
+        }
         console.log(border);
         for (var z = 0; z < arr.length; z++) {
             var word = arr[z];
@@ -28,15 +28,15 @@
             while (wordLength < strLength) {    
                 space+=" ";
                 wordLength++;   
-            };
+            }
             console.log(symb + ' ' + word + space + symb);
-        };
+        }
         console.log(border);
-    };
+    }
     frame (['line', 'length', 'is', '10', 'characters'], '+');
-    console.log(' ')
+    console.log(' ');
     frame (['line', 'length', 'is', '6'], '=');
-    console.log(' ')
+    console.log(' ');
     frame (['line', '4'], '.');
         
     </script>
